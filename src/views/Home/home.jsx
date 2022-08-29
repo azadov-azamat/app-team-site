@@ -11,22 +11,11 @@ import {useNavigate} from "react-router"
 import ScrollUp from "../../components/ScrollUp"
 import Contacts from "../../components/Contacts"
 import AOS from "aos"
-import {useSelector} from "react-redux";
+import {useSelector} from "react-redux"
 
 export default function Home() {
 
-    const {t} = useTranslation()
-    const navigate = useNavigate()
-
     const {service} = useSelector(state => state.variables)
-    const data = Array(2, 2, 2)
-    const portfolios = Array(2, 2, 2, 2)
-    const links = [
-        {id: 1, name: 'All'},
-        {id: 2, name: 'Frontend'},
-        {id: 3, name: 'Backend'},
-        {id: 4, name: 'Fullstack'}
-    ]
 
     useEffect(() => {
         AOS.init({
