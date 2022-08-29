@@ -1,0 +1,108 @@
+.wrapper {
+  @apply w-full h-20 bg-primary_black shadow shadow-nav px-4 lg:px-28 2xl:px-32 flex items-center justify-between;
+
+  .toggle {
+    @apply lg:hidden flex flex-col gap-2 cursor-pointer z-50;
+    .span {
+      @apply w-8 h-1 bg-primary_yellow border border-primary_yellow rounded;
+    }
+
+    .checkbox {
+      @apply fixed block w-8 h-8 top-7 right-4 z-50 opacity-0 cursor-pointer;
+    }
+
+    .hamburger-lines {
+      @apply h-7 w-8 fixed top-7 right-4 z-20 flex flex-col justify-between items-center;
+
+      span {
+        @apply bg-primary_yellow w-full flex rounded h-1;
+      }
+
+      .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+    }
+
+    input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+      transform: rotate(45deg);
+    }
+
+    input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+      transform: scaleY(0);
+    }
+
+    input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+      transform: rotate(-45deg);
+    }
+
+    input[type="checkbox"]:checked ~ .logo {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked ~ .menu {
+      @apply right-0 top-0 z-10 w-full h-screen;
+    }
+
+    .menu {
+      @apply fixed right-[-200px] top-0 z-10 flex flex-col gap-8 justify-center items-center;
+      background-color: rgb(0, 0, 0, 0.92);
+      transition-duration: .25s;
+      ul {
+        @apply flex flex-col items-center gap-8 text-lg text-primary_light leading-6 uppercase;
+        li {
+          @apply delay-300 hover:text-primary_yellow;
+        }
+      }
+      .lang {
+        @apply flex items-center gap-4 text-primary_light;
+        button {
+          @apply delay-300 hover:text-primary_yellow;
+        }
+
+        .active {
+          @apply text-primary_yellow;
+        }
+      }
+    }
+  }
+
+  .logo {
+    img {
+      @apply lg:w-24 w-16
+    }
+  }
+
+  .links {
+    @apply lg:block hidden;
+    ul {
+      @apply flex items-center gap-8 text-lg text-primary_light leading-6 uppercase;
+      li {
+        @apply delay-300 hover:text-primary_yellow;
+      }
+    }
+  }
+
+  .setting {
+    @apply lg:block hidden;
+    .lang {
+      @apply flex items-center gap-4 text-primary_light;
+      button {
+        @apply delay-300 hover:text-primary_yellow;
+      }
+
+      .active {
+        @apply text-primary_yellow;
+      }
+    }
+  }
+}

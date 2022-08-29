@@ -1,0 +1,29 @@
+@import url('http://fonts.cdnfonts.com/css/montserrat');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #384049;
+    border-radius: 15px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #384049;
+}

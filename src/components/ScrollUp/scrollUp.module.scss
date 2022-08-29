@@ -1,0 +1,7 @@
+.wrapper {
+  @apply fixed bottom-4 right-4 cursor-pointer;
+  svg {
+    @apply text-primary_yellow hover:bg-primary_light rounded;
+    transition: 0.5s ease;
+  }
+}

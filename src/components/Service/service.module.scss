@@ -1,0 +1,10 @@
+.wrapper {
+  @apply lg:h-[400px] h-auto my-2 lg:mx-0 bg-primary_black shadow shadow-service lg:p-8 p-6;
+  .title {
+    @apply text-primary_light text-center 2xl:text-4xl text-3xl font-bold;
+  }
+
+  p {
+    @apply w-full h-full flex items-center font-normal 2xl:text-lg text-base text-primary_light leading-8 lg:mt-0 mt-5 text-ellipsis overflow-hidden;
+  }
+}

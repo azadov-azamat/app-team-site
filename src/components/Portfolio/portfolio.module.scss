@@ -1,0 +1,76 @@
+.wrapper {
+  @apply w-full bg-primary_black;
+
+  .links {
+    @apply hidden md:block pb-5;
+    .row {
+      @apply flex px-4 lg:px-28 2xl:px-32 gap-8;
+      .links {
+        @apply cursor-pointer font-normal text-lg text-primary_light hover:font-bold;
+        transition: all .5s;
+
+        &:hover {
+          text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+
+  .portfolio {
+    @apply w-full flex;
+    .row {
+      @apply w-full h-full flex flex-col px-4 lg:px-28 2xl:px-32 gap-8;
+      .data {
+        @apply w-full h-full flex gap-8;
+        transition: .5s;
+
+        .text {
+          @apply w-full flex;
+          .index {
+            @apply flex xl:justify-start justify-center items-center;
+            p {
+              @apply z-10 text-primary_light font-bold 2xl:text-4xl text-xl mt-2;
+            }
+
+            span {
+              @apply absolute font-bold 2xl:text-6xl text-4xl text-primary_light opacity-5 mx-1;
+            }
+          }
+
+          .name {
+            @apply text-primary_light font-bold 2xl:text-3xl text-xl flex flex-col justify-end px-5;
+          }
+        }
+
+        img {
+          @apply w-full h-[90%] object-cover object-center;
+          transition: all .5s;
+
+          &:hover, &:focus, &:active {
+            cursor: pointer;
+            transform: scale(0.9);
+          }
+
+        }
+      }
+
+      .btn-all {
+        @apply w-full flex justify-center items-center;
+        button {
+          @apply bg-primary_yellow rounded-3xl h-12 border-none py-4 px-6 text-lg font-bold flex justify-center items-center;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  @apply w-full font-normal text-lg text-primary_light font-bold;
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);
+}
+
+.border-img {
+  @apply h-full absolute right-16 w-16 hidden md:block;
+  background-size: 80% auto;
+  background: url('../../assets/png/Coolfile.png') repeat-y;
+}

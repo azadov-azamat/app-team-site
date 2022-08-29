@@ -1,0 +1,54 @@
+.form-control {
+  @apply flex flex-col items-center justify-between w-96 h-2/3 p-9 bg-primary_black box-border gap-8 border border-primary_light backdrop-blur-md;
+  animation: shine .5s infinite;
+  -moz-animation: shine .5s infinite;
+  -webkit-animation: shine .5s infinite;
+  -o-animation: shinem .5s infinite;
+
+  h3 {
+    @apply text-center text-primary_light text-lg leading-6 font-bold;
+  }
+
+  .form-group {
+    @apply relative w-full h-12;
+    .select {
+      @apply w-full h-full h-12 border-none relative;
+      select {
+        width: 100%;
+        padding: 10px;
+        color: #FFFFFF;
+        background-color: transparent;
+        outline: 1px solid #FFFFFF;
+
+        option {
+          color: #0e2431;
+        }
+      }
+
+      .select:focus + .select-label,
+      select:valid + .select-label {
+        transform: translate(10px, -10px) scale(.8);
+        color: #d1c5fc;
+        padding-inline: 5px;
+        background-color: #242329;
+      }
+
+      .select:is(:focus, :valid) {
+        outline-color: #d1c5fc;
+      }
+
+      .select-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #FFFFFF;
+        transform: translate(10px, 10px);
+        transition: transform .25s;
+      }
+    }
+
+    button {
+      @apply w-full h-full text-center bg-primary_yellow font-bold;
+    }
+  }
+}

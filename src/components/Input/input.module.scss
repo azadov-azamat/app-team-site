@@ -1,0 +1,33 @@
+.input-group {
+  width: 100%;
+  position: relative;
+
+  .input {
+    width: 100%;
+    padding: 10px;
+    color: #FFFFFF;
+    background-color: transparent;
+    outline: 1px solid #FFFFFF;
+  }
+
+  .input:focus + .input-label,
+  input:valid + .input-label {
+    transform: translate(10px, -10px) scale(.8);
+    color: #d1c5fc;
+    padding-inline: 5px;
+    background-color: #242329;
+  }
+
+  .input:is(:focus, :valid) {
+    outline-color: #d1c5fc;
+  }
+
+  .input-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #FFFFFF;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+  }
+}

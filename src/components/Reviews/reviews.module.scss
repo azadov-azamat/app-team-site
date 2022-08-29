@@ -1,0 +1,32 @@
+.reviews {
+  @apply w-full h-full pb-16 bg-primary_black;
+
+  .owl-theme {
+    @apply px-4 lg:px-28 2xl:px-32;
+  }
+
+  .review {
+    @apply w-full h-72 2xl:w-[480px] 2xl:h-96 lg:w-[350px] lg:h-80 sm:w-[300px] rounded-3xl flex flex-col p-8;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+
+    .user-img {
+      @apply flex flex-col justify-center items-center gap-3;
+      p {
+        @apply text-lg text-primary_light font-bold;
+      }
+    }
+
+    .comment {
+      p {
+        @apply xl:h-40 lg:h-36 md:h-32 h-28 font-normal text-primary_light leading-8 text-ellipsis overflow-hidden;
+      }
+    }
+
+    .stars {
+      @apply w-full;
+      svg {
+        @apply text-primary_yellow float-right mx-1;
+      }
+    }
+  }
+}

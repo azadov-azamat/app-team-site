@@ -1,0 +1,10 @@
+.wrapper{
+  @apply w-full h-44 bg-primary_black flex xl:justify-start justify-center items-center px-0 lg:px-28 2xl:px-32 uppercase overflow-x-hidden;
+  p{
+    @apply z-10 text-primary_yellow font-bold 2xl:text-5xl text-3xl px-24 mt-2;
+    text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);
+  }
+  h1{
+    @apply absolute font-bold 2xl:text-[100px] text-6xl text-primary_light opacity-5 sm:block hidden;
+  }
+}

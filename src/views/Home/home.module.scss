@@ -1,0 +1,33 @@
+.wrapper {
+@apply w-full h-full;
+  .service {
+    @apply w-full h-auto bg-primary_black pb-10;
+    .row {
+      @apply w-full h-full flex justify-between items-center px-4 lg:px-28 2xl:px-32 bg-primary_black;
+    }
+  }
+
+  .links {
+    @apply w-full bg-primary_black hidden md:block;
+    .row {
+      @apply w-full h-full flex px-4 lg:px-28 2xl:px-32 gap-8;
+    }
+  }
+
+  .portfolio {
+    @apply w-full flex bg-primary_black;
+    .row {
+      @apply w-full h-full flex flex-col px-4 lg:px-28 2xl:px-32 gap-8;
+      .data{
+        @apply w-full h-full flex gap-8;
+        transition: .5s;
+      }
+      .btn-all{
+        @apply w-full flex justify-center items-center;
+        button{
+          @apply bg-primary_yellow rounded-3xl h-12 border-none py-4 px-6 text-lg font-bold flex justify-center items-center;
+        }
+      }
+    }
+  }
+}
