@@ -71,6 +71,18 @@
 
 .border-img {
   @apply h-full absolute right-16 w-16 hidden md:block;
-  background-size: 80% auto;
-  background: url('../../assets/png/Coolfile.png') repeat-y;
+  div{
+    @apply w-full h-full;
+    background-size: 80% auto;
+    background: url('../../assets/png/Coolfile.png') repeat-y;
+  }
+  animation: line 5s linear infinite;
+  @keyframes line {
+    //0%{
+    //  transform: rotateX(0deg);
+    //}
+    //100%{
+    //  transform: rotateX(360deg);
+    //}
+  }
 }

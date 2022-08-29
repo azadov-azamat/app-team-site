@@ -12,13 +12,14 @@ function HeaderForm() {
 
     return (
         <form className={classes['form-control']}>
-            <h3>{t('submit_application')}</h3>
+            {/*<h3>{t('submit_application')}</h3>*/}
+            <h3>Оставить заявку</h3>
             <div className={classes['form-group']}>
-                <InputText label={"name"} name={"name"}/>
+                <InputText label={"Имя"} name={"name"}/>
             </div>
 
             <div className={classes['form-group']}>
-                <InputText label={"phone_number"} name={"phone_number"}/>
+                <InputText label={"Телефон номер"} name={"phone_number"}/>
             </div>
 
             <div className={classes['form-group']}>
@@ -26,21 +27,13 @@ function HeaderForm() {
                   <select name="category" id="react-select">
                       {categories.map(item=> <option value={item.value}>{item.label}</option>)}
                   </select>
-                  <label htmlFor="name" className={classes['select-label']}>{t('categories')}</label>
+                  <label htmlFor="name" className={classes['select-label']}>Категория</label>
+                  {/*<label htmlFor="name" className={classes['select-label']}>{t('categories')}</label>*/}
               </div>
-                {/*<ReactSelect*/}
-                {/*    id={'react-select'}*/}
-                {/*    options={categories}*/}
-                {/*    isClearable={true}*/}
-                {/*    name="category"*/}
-                {/*    className={classes['react-select']}*/}
-                {/*    placeholder={t('category')}*/}
-                {/*    getOptionLabel={option => option?.label}*/}
-                {/*    getOptionValue={option => option?.value}*/}
-                {/*/>*/}
             </div>
             <div className={classes['form-group']}>
-                <button>{t('send')}</button>
+                {/*<button>{t('send')}</button>*/}
+                <button>Отправить</button>
             </div>
         </form>
     )

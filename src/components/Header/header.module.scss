@@ -1,6 +1,6 @@
 .wrapper {
   @apply w-full h-screen flex items-center
-  justify-center bg-primary_header bg-center bg-center bg-fixed relative overflow-y-hidden;
+  justify-center bg-cover bg-center bg-fixed relative overflow-y-hidden;
 
   .header-img {
     @apply w-full h-full absolute -z-10;

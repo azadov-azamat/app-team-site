@@ -3,7 +3,7 @@ import classes from "./header.module.scss"
 import HeaderForm from "../HeaderForm/HeaderForm.jsx";
 import {BsFacebook, BsInstagram, BsTelegram} from "react-icons/all";
 import {useTranslation} from "react-i18next";
-
+import head from "../../assets/png/head.png"
 export default function Header() {
 
     const {t} = useTranslation()
@@ -11,7 +11,7 @@ export default function Header() {
     return (
         <div className={classes.wrapper}>
             <img
-                src={'https://images.unsplash.com/photo-1661522276576-b3e5b8eb47c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'}
+                src={head}
                 className={classes['header-img']}/>
             <div className={classes['header-content']}>
                 <div className={classes['header-data']}>
@@ -30,7 +30,8 @@ export default function Header() {
                 </div>
 
                 <div className={classes.application}>
-                    <button>{t('submit_application')}</button>
+                    {/*<button>{t('submit_application')}</button>*/}
+                    <button>Отправить</button>
                 </div>
 
                 <div className={classes['social-media']}>

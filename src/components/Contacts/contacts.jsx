@@ -25,7 +25,7 @@ export default function Contacts() {
     ]
     return (
         <div className={classes.wrapper} id={'contact'}>
-            <Contextname text={'contacts'}/>
+            <Contextname text={'Контакты'}/>
             <Row className={classes.row}>
                 {
                     data.map((item, index) => (

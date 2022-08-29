@@ -5,6 +5,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        "spin-slow": "spin 20s linear infinite",
+        "spin-line": "line 5s linear infinite"
+      },
+      keyframes: {
+        line: {
+          "0%": {transform: "rotate(0deg)"},
+          "100%": {transform: "rotate(-360deg)"}
+        }
+      },
       boxShadow: {
         nav: "0 4px 10px rgba(0, 0, 0, 0.4)",
         service: '-10px -10px 20px rgba(0, 0, 0, 0.3), 10px 10px 20px rgba(0, 0, 0, 0.3)',

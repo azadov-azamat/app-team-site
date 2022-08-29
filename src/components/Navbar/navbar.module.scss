@@ -8,11 +8,11 @@
     }
 
     .checkbox {
-      @apply fixed block w-8 h-8 top-14 right-4 z-50 opacity-0 cursor-pointer;
+      @apply fixed block w-8 h-8 top-7 right-4 z-50 opacity-0 cursor-pointer;
     }
 
     .hamburger-lines {
-      @apply h-7 w-8 fixed top-14 right-4 z-20 flex flex-col justify-between items-center;
+      @apply h-7 w-8 fixed top-7 right-4 z-20 flex flex-col justify-between items-center;
 
       span {
         @apply bg-primary_yellow w-full flex rounded h-1;

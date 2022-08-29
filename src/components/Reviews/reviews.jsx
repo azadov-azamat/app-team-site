@@ -1,11 +1,13 @@
 import React from 'react'
 import classes from './reviews.module.scss'
 import Review from "./review"
-import {services} from "../../utils/faceData.js"
 import OwlCarousel from 'react-owl-carousel'
 import Contextname from "../ContextName/index.jsx"
+import {useSelector} from "react-redux";
 
 export default function Reviews() {
+
+    const {portfolio} = useSelector(state => state.variables)
 
     const responsive = {
         0: {
@@ -33,7 +35,7 @@ export default function Reviews() {
 
     return (
         <div className={classes.reviews}>
-            <Contextname text={'reviews'}/>
+            <Contextname text={'Отзывы'}/>
             <div className={classes['owl-theme']}>
                 <OwlCarousel
                     loop
@@ -44,7 +46,7 @@ export default function Reviews() {
                     responsive={responsive}
                     smartSpeed={500}
                 >
-                    {services.map((item, index) => (
+                    {portfolio.map((item, index) => (
                         <Review key={index.toString()}/>
                     ))}
                 </OwlCarousel>

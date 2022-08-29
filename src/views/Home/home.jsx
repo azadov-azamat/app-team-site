@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import classes from "./home.module.scss"
 import Header from "../../components/Header/index.jsx"
 import Contextname from "../../components/ContextName"
@@ -10,12 +10,15 @@ import Reviews from "../../components/Reviews"
 import {useNavigate} from "react-router"
 import ScrollUp from "../../components/ScrollUp"
 import Contacts from "../../components/Contacts"
+import AOS from "aos"
+import {useSelector} from "react-redux";
 
 export default function Home() {
 
     const {t} = useTranslation()
     const navigate = useNavigate()
 
+    const {service} = useSelector(state => state.variables)
     const data = Array(2, 2, 2)
     const portfolios = Array(2, 2, 2, 2)
     const links = [
@@ -25,16 +28,21 @@ export default function Home() {
         {id: 4, name: 'Fullstack'}
     ]
 
+    useEffect(() => {
+        AOS.init({
+            duration: 1000
+        });
+    }, [])
+
     return (
         <div className={classes.wrapper}>
             <Header/>
            <div className="w-full" id={"service"}>
-               <Contextname text={'services'}/>
+               <Contextname text={'услуги'}/>
                <div className={classes.service}>
                    <Row className={classes.row}>
                        {
-                           data.map((item, index) => <Services key={index.toString()} title={"Web-Design"}
-                                                               about={"Именно графический дизайн может помочь продать идею или продукт. Создание фирменного стиля компании, брендинга, упаковки в последнее время все более востребовано на рынке. "}/>)
+                           service.map((item, index) => <Services key={index.toString()} title={item.title} about={item.text}/>)
                        }
                    </Row>
                </div>

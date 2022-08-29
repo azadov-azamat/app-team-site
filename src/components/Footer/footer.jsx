@@ -11,9 +11,9 @@ export default function Footer() {
     const {t} = useTranslation()
 
     const links = [
-        {id: 1, name: 'service', href: '#service'},
-        {id: 2, name: 'portfolio', href: '#portfolio'},
-        {id: 3, name: 'contact', href: '#contact'}
+        {id: 1, name: 'услуги', href: '#service'},
+        {id: 2, name: 'портфолио', href: '#portfolio'},
+        {id: 3, name: 'контакты', href: '#contact'}
     ]
 
     return (
