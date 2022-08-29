@@ -25,7 +25,7 @@ function HeaderForm() {
             <div className={classes['form-group']}>
               <div className={classes.select}>
                   <select name="category" id="react-select">
-                      {categories.map(item=> <option value={item.value}>{item.label}</option>)}
+                      {categories.map((item, index)=> <option key={index.toString()} value={item.value}>{item.label}</option>)}
                   </select>
                   <label htmlFor="name" className={classes['select-label']}>Категория</label>
                   {/*<label htmlFor="name" className={classes['select-label']}>{t('categories')}</label>*/}

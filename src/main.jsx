@@ -6,7 +6,7 @@ import {ToastContainer} from "react-toastify"
 
 import App from "./App"
 import {store} from "./redux/store.js"
-import "./utils/bootstrap.js"
+// import "./utils/bootstrap.js"
 
 import "aos/dist/aos"
 import "aos/dist/aos.css"
