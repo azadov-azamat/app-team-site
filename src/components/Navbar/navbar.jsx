@@ -71,7 +71,7 @@ export default function Navbar() {
             </div>
 
             <div className={position !== 0 ? classes.toggle + " fixed flex justify-center items-center" +
-                " w-14 h-14 rounded-full top-[15px] bg-primary_black right-1 z-50" : classes.toggle}>
+                " w-14 h-14 rounded-full top-10 bg-primary_black right-1 z-50" : classes.toggle}>
                 <input className={classes.checkbox} type="checkbox" name="" id=""/>
                 <div className={classes['hamburger-lines']}>
                     <span className={classes.line1}></span>
